@@ -19,7 +19,7 @@ void SpellBook::learnSpell(ASpell *spell)
 		if ((*it)->getName() == spell->getName())
 			return;
 	}
-	this->spells.push_back(spell);
+	this->spells.push_back(spell->clone());
 }
 
 void SpellBook::forgetSpell(const std::string &spellName)
